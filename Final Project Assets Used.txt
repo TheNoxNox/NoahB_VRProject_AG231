@@ -12,4 +12,6 @@ Gunshot + Sword hit sounds from Zapsplat.com
 
 Skybox from https://assetstore.unity.com/packages/2d/textures-materials/sky/allsky-free-10-sky-skybox-set-146014
 
+Muzzle flash from https://assetstore.unity.com/packages/vfx/particles/war-fx-5669
+
 Map from https://assetstore.unity.com/packages/3d/environments/roof-top-safe-house-195991
