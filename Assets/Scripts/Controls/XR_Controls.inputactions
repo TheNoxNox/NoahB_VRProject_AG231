@@ -1,0 +1,58 @@
+{
+    "name": "XR_Controls",
+    "maps": [
+        {
+            "name": "Last Stand",
+            "id": "2e8c1aad-bafa-434e-a937-a36750a7e871",
+            "actions": [
+                {
+                    "name": "Open Lefthand Menu",
+                    "type": "Button",
+                    "id": "26077ac3-2782-4fd2-9fd2-cef7d3307359",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ShootGun",
+                    "type": "Button",
+                    "id": "aa769694-b5f0-4571-8fc3-2aa366e59f43",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a74e5db6-8d33-40c8-93e1-53c2c14062f8",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "XR",
+                    "action": "Open Lefthand Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b41b8aa6-4b74-4ae7-94ba-03ec5943d177",
+                    "path": "<ViveController>{LeftHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShootGun",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "XR",
+            "bindingGroup": "XR",
+            "devices": []
+        }
+    ]
+}

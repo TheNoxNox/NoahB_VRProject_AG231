@@ -1,0 +1,15 @@
+Zombie model from https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232
+
+Zombie sounds from https://assetstore.unity.com/packages/audio/sound-fx/creatures/free-zombie-character-sounds-141740
+
+Ground Textures from https://assetstore.unity.com/packages/2d/textures-materials/floors/pbr-ground-materials-1-dirt-grass-85402
+
+Gun model from https://assetstore.unity.com/packages/3d/props/guns/pistol-92-175490
+
+Sword model from https://assetstore.unity.com/packages/3d/props/weapons/iron-sword-203205
+
+Gunshot + Sword hit sounds from Zapsplat.com
+
+Skybox from https://assetstore.unity.com/packages/2d/textures-materials/sky/allsky-free-10-sky-skybox-set-146014
+
+Map from https://assetstore.unity.com/packages/3d/environments/roof-top-safe-house-195991
