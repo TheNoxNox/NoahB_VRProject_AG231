@@ -37,10 +37,10 @@
                 {
                     "name": "",
                     "id": "b41b8aa6-4b74-4ae7-94ba-03ec5943d177",
-                    "path": "<ViveController>{LeftHand}/triggerPressed",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "XR",
                     "action": "ShootGun",
                     "isComposite": false,
                     "isPartOfComposite": false

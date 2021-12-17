@@ -21,7 +21,7 @@ public class Zombie : MonoBehaviour
 
     public float growlTimer;
 
-    bool isDead = false;
+    public bool isDead = false;
 
     private void Awake()
     {
@@ -43,7 +43,7 @@ public class Zombie : MonoBehaviour
         {
             Vector3 playerPos = new Vector3(Game.Instance.thePlayer.gameObject.transform.position.x, 0, Game.Instance.thePlayer.gameObject.transform.position.z);
             Vector3 myPos = new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z);
-            if(Mathf.Abs(Vector3.Distance(myPos, playerPos)) <= 1f)
+            if(Mathf.Abs(Vector3.Distance(myPos, playerPos)) <= 2f)
             {
                 Agent.SetDestination(gameObject.transform.position);
                 Anim.SetBool("Attacking", true);
@@ -77,6 +77,7 @@ public class Zombie : MonoBehaviour
     {
         if (!isDead)
         {
+            isDead = true;
             Anim.SetInteger("DeathType", Random.Range(0, 2));
             Anim.SetBool("Dead", true);
             Agent.isStopped = true;

@@ -16,6 +16,8 @@ public class PlayerGun : MonoBehaviour
 
     public float muzzleTimer = 0.2f;
 
+    public LayerMask mask;
+
     private void Awake()
     {
         shotTimer = shotCD;
@@ -30,10 +32,12 @@ public class PlayerGun : MonoBehaviour
 
             RaycastHit hit;
 
-            if(Physics.Raycast(muzzleflash.transform.position, transform.TransformDirection(Vector3.forward), out hit, 500f))
+            if(Physics.Raycast(muzzleflash.transform.position, transform.TransformDirection(Vector3.right), out hit, 500f, mask))
             {
+                Debug.Log(hit.collider.gameObject.name);
+
                 Zombie zomb = hit.collider.gameObject.GetComponent<Zombie>();
-                if (zomb)
+                if (zomb && !zomb.isDead)
                 {
                     zomb.Die();
                 }

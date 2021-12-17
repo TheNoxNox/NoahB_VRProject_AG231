@@ -9,7 +9,7 @@ public class PlayerSword : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Zombie zomb = other.gameObject.GetComponent<Zombie>();
-        if (zomb)
+        if (zomb && !zomb.isDead)
         {
             audioSrc.Play();
             zomb.Die();
