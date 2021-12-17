@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerGun : MonoBehaviour
 {
     public AudioSource audioSrc;
 
-    public float shotCD = 0.75f;
+    public float shotCD = 0.08f;
 
     public float shotTimer;
 
@@ -23,26 +24,32 @@ public class PlayerGun : MonoBehaviour
         shotTimer = shotCD;
     }
 
-    public void Shoot()
+    public void Shoot(InputAction.CallbackContext ctx)
     {
-        if (!shotOnCooldown)
+        if (ctx.performed)
         {
-            muzzleflash.SetActive(true);
-            audioSrc.Play();
-
-            RaycastHit hit;
-
-            if(Physics.Raycast(muzzleflash.transform.position, transform.TransformDirection(Vector3.right), out hit, 500f, mask))
+            if (!shotOnCooldown)
             {
-                Debug.Log(hit.collider.gameObject.name);
+                muzzleflash.SetActive(true);
+                audioSrc.Play();
 
-                Zombie zomb = hit.collider.gameObject.GetComponent<Zombie>();
-                if (zomb && !zomb.isDead)
+                shotOnCooldown = true;
+
+                RaycastHit hit;
+
+                if (Physics.Raycast(muzzleflash.transform.position, transform.TransformDirection(Vector3.right), out hit, 500f, mask))
                 {
-                    zomb.Die();
+                    Debug.Log(hit.collider.gameObject.name);
+
+                    Zombie zomb = hit.collider.gameObject.GetComponent<Zombie>();
+                    if (zomb && !zomb.isDead)
+                    {
+                        zomb.Die();
+                    }
                 }
             }
         }
+        
     }
 
     void Update()
